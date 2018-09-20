@@ -4,7 +4,10 @@
     "description": "immutable for history",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec ts-node ./src/index.ts",
+        "start": "nodemon",
+        "start:back": "nodemon --watch './src/index.ts' --ignore './src/*.spec.ts' --exec ts-node ./src/index.ts",
+        "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
+        "watch:serve": "ts-node ./src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
